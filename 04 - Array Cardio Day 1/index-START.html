@@ -75,10 +75,15 @@
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
-    data.reduce((sum,current,index,array)=>{
-      
+    sumOfAll={}
+    data.forEach((ele)=>{
+      if (ele in sumOfAll){
+        sumOfAll[ele] += 1; 
+      }else{
+        sumOfAll[ele] = 1;
+      }
     })
-
+    console.log(sumOfAll)
   </script>
 </body>
 </html>
