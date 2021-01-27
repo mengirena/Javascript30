@@ -13,9 +13,9 @@ This is cloned from [Wes Bos's awesome challenge (free!)](https://github.com/wes
 
     A small `i` showing next to the object displays:
 
-> Value below was evaluated just now.
+    > Value below was evaluated just now.
 
-[Question asked about this behavior on stackoverflow] (https://stackoverflow.com/questions/23429203/weird-behavior-with-objects-console-log)
+[Question asked about this behavior on stackoverflow](https://stackoverflow.com/questions/23429203/weird-behavior-with-objects-console-log)
 
 * Use DOM to get data from a webpage: the result gotten from `document.querySelector()` can be chained by another `querySelector()` or `querySelectorAll()`
 
