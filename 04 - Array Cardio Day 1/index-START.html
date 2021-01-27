@@ -38,7 +38,7 @@
     // Array.prototype.filter()
     // 1. Filter the list of inventors for those who were born in the 1500's
     let inventorBornInCriteria = inventors.filter(inventor=>inventor.year>=1500&&inventor.year<1600)
-    console.log(inventorBornInCriteria)
+    console.table(inventorBornInCriteria)
 
     // Array.prototype.map()
     // 2. Give us an array of the inventors first and last names
@@ -48,7 +48,7 @@
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
     inventors.sort((a,b)=>a.year-b.year)
-    console.log(inventors)
+    console.table(inventors)
     //sort can modify the array!!!
 
     // Array.prototype.reduce()
@@ -60,6 +60,8 @@
     console.log(inventors)
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+
+    //Didn't realized that we can also manipulate DOM
     let parisRoad = [
 'Boulevards of Paris',
 'City walls of Paris',
@@ -102,6 +104,15 @@
 ]
 let filteredRoad = parisRoad.filter(ele=>ele.includes("de"))
 console.log(filteredRoad)
+
+//get data from DOM
+const session = document.querySelector(".mw-category");
+const links = session.querySelectorAll("a");
+const roadList = Array.from(links);
+const getRoadName = roadList.map(item=>item.innterText);
+const roadNameDe = getRoadName.filter(road=>road.includes("de"))
+
+
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
