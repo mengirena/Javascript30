@@ -24,3 +24,7 @@ This is cloned from [Wes Bos's awesome challenge (free!)](https://github.com/wes
 * Use `Array.from(arrayLike)` to create an array of an iterable object 
 
 * Use [spread operator](https://dev.to/sagar/three-dots---in-javascript-26ci) `[...nodeList]` can also make the nodeList to be a list
+
+* Use [destructuring assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) to unpack values from an array.
+
+* The initial value as a parameter of a `reduce()` function can be an object.
