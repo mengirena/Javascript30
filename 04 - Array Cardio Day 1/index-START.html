@@ -136,6 +136,12 @@ const roadNameDe = getRoadName.filter(road=>road.includes("de"))
       }
     })
     console.log(sumOfAll)
+    data.reduce((obj,ele)=>{
+      if (!obj[ele]){
+        obj[ele] = 0;
+      }
+      obj[ele]++
+    },{})
   </script>
 </body>
 </html>
