@@ -3,7 +3,7 @@
 This is cloned from [Wes Bos's awesome challenge (free!)](https://github.com/wesbos/JavaScript30)
 
 ## My learning progress
-![Current progress](https://progress-bar.dev/3.33/?title=completed)
+![Current progress](https://progress-bar.dev/3/?title=completed)
 
 ## 04 Array Cardio Day 1 (01/24/2021 - 01/26/2021)
 ### **Highlights**
