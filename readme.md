@@ -28,3 +28,8 @@ This is cloned from [Wes Bos's awesome challenge (free!)](https://github.com/wes
 * Use [destructuring assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) to unpack values from an array.
 
 * The initial value as a parameter of a `reduce()` function can be an object.
+
+## 01 JavaScript Drum Kit (01/27/2021 - on-going)
+### **Highlights**
+
+* `addEventListener()` can also listen to keyboard events such as `keydown`
