@@ -23,7 +23,7 @@
     </div>
     <div data-key="70" class="key">
       <kbd>F</kbd>
-      <span class="sound">openhat</span>
+      <span class="sound">aopenhat</span>
     </div>
     <div data-key="71" class="key">
       <kbd>G</kbd>
@@ -50,7 +50,7 @@
   <audio data-key="65" src="sounds/clap.wav"></audio>
   <audio data-key="83" src="sounds/hihat.wav"></audio>
   <audio data-key="68" src="sounds/kick.wav"></audio>
-  <audio data-key="70" src="sounds/openhat.wav"></audio>
+  <audio data-key="70" src="sounds/aopenhat.wav"></audio>
   <audio data-key="71" src="sounds/boom.wav"></audio>
   <audio data-key="72" src="sounds/ride.wav"></audio>
   <audio data-key="74" src="sounds/snare.wav"></audio>
@@ -58,7 +58,47 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
 <script>
-  document.querySelector(".key").addEventListener("keydown",'')
+  /*
+    1. find key
+    2. find div
+    3. find audio
+    4. play sound and change display
+  */
+  document.addEventListener("keydown", findKey)
+  document.addEventListener("keyup", removeChange)
+  let pressedDiv
+  const keyDivs = Array.from(document.querySelectorAll('.key'))
+  console.log(keyDivs)
+
+  const keyToChange = keyDivs.reduce((keyToSound, div) => {
+       const sound = div.children[1].innerHTML
+       const key = div.children[0].innerHTML.toLowerCase()
+       const parentNode = div.dataset.key
+       keyToSound[key]= [sound, parentNode]
+       return keyToSound
+  }, {})
+  console.log(keyToChange)
+
+
+  function findKey(e){
+    console.log(e)
+    console.log(e.key)
+    const pressed = e.key.toLowerCase()
+    if (pressed in keyToChange){
+      const audio = new Audio(`sounds/${keyToChange[pressed][0]}.wav`);
+      audio.play();
+      pressedDiv = document.querySelector(`div[data-key='${keyToChange[pressed][1]}']`)
+      console.log(pressedDiv)
+      pressedDiv.classList.add("playing")
+     
+    }
+  }
+
+  function removeChange(){
+    console.log('keyup')
+    pressedDiv.classList.remove("playing")
+  }
+
 </script>
 
 
